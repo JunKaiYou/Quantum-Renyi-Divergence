@@ -16,4 +16,4 @@ The contents of this repository are as follows:
 - Install the MATLAB package given in [here](https://www.mathworks.com/matlabcentral/fileexchange/41621-fractional-matrix-powers-with-frechet-derivatives-and-condition-number-estimate) to compute the Frechet derivative of the power function[<sup>1</sup>](#refer-anchor-1)
 
 <div id="refer-anchor-1"></div>
-[1] Nicholas J. Higham and Lijing Lin. An improved Schur–Pad´e algorithm for fractional powers of a matrix and their frechet derivatives. SIAM J. Matrix Anal. Appl., 34(3):1341–1360, 2013.
+[1] Nicholas J. Higham and Lijing Lin. An improved Schur–Pade algorithm for fractional powers of a matrix and their frechet derivatives. SIAM J. Matrix Anal. Appl., 34(3):1341–1360, 2013.
