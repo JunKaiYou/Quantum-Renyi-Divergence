@@ -6,7 +6,7 @@ addpath(genpath('C:\EXP\QETLAB-0.9'))
 addpath(genpath('C:\EXP\mft\mftoolbox'))
 %
 
-%% Random density matrix 
+% Random density matrix 
 random_num = 1024; d = 10;
 A = [];
 for i = 1:random_num
@@ -16,7 +16,7 @@ end
 p = rand(1, random_num); 
 p = p./ sum(p); % probability of A
 
-%% Parameters
+% Parameters 
 max_iter_minimizer = 20;
 max_iter = 10;
 alpha = 0.5;
@@ -40,8 +40,7 @@ path = 0; tl = 1; l = 1; % Polyak 2
 
 sigma0 = eye(d)./sum(ones(1, d)); % initial point
 
-%% minimizer
-
+% minimizer
 sigma = sigma0; 
 for i = 1 : max_iter_minimizer  
     X = ['Armijomin', num2str(i)];
@@ -52,7 +51,7 @@ end
 f_min = func_val(sigma , alpha, p, A); % minimum value
 
 
-%% Algorithms
+% Algorithms:
 % Armijo
 seq_mirror = func_val(sigma0, alpha, p, A)- f_min;
 seq_t_mirror = 0;
@@ -137,7 +136,7 @@ seq_Polyak2(:, I3+1:end) = [];
 I4 = find(seq_heuristic < 10^(-5), 1);
 seq_heuristic(:, I4+1:end) = [];
 
-%% f-f_min v.s iteration
+% f-f_min v.s iteration
 figure(1)
 lw = 'linewidth';
 linewidth = 2;
@@ -157,8 +156,7 @@ ylabel('f(x_t)-f*')
 legend("Armijo", "Polyak", "Polyak2", "Augustin")
 hold off
 
-%% f-f_min v.s elapsed time
-
+% f-f_min v.s elapsed time
 subplot(2,1,2)
 lw = 'linewidth';
 linewidth = 2;
