@@ -101,7 +101,7 @@ for i = 1 : max_iter
     disp(X);
     tic
     func_grad = grad(sigma , alpha, p, A);
-    [sigma, Polyak1_params.delta_l, path, tl, l] = Polyak2(sigma, func_grad, alpha, p, A, seq_Polyak_main2, i, path, tl, l, Polyak2_params);
+    [sigma, Polyak2_params.delta_l, path, tl, l] = Polyak2(sigma, func_grad, alpha, p, A, seq_Polyak_main2, i, path, tl, l, Polyak2_params);
     t_Polyak2 = toc ;
     seq_Polyak2 = [seq_Polyak2 max(0,real(func_val(sigma, alpha, p, A)- f_min))];
     seq_Polyak_main2 = [seq_Polyak_main2 func_val(sigma, alpha, p, A)];
